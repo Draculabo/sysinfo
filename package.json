@@ -1,6 +1,6 @@
 {
-  "name": "@napi-rs/sysinfo",
-  "version": "1.0.0",
+  "name": "@draculabo/sysinfo-process-enhanced",
+  "version": "0.1.0",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
@@ -29,22 +29,39 @@
     "systeminformation": "^5.27.7"
   },
   "ava": {
-    "timeout": "3m"
+    "timeout": "3m",
+    "files": [
+      "__test__/**/*.spec.mjs"
+    ]
   },
   "engines": {
     "node": ">= 14"
   },
   "scripts": {
     "artifacts": "napi artifacts",
-    "build": "napi build --platform --release",
-    "build:debug": "napi build --platform",
+    "build": "node scripts/build.mjs",
+    "build:debug": "node scripts/build.mjs --debug",
     "lint": "oxlint",
     "prepublishOnly": "napi prepublish -t npm",
-    "test": "ava",
+    "test": "yarn test:unit && yarn test:integration && ava",
     "universal": "napi universal",
-    "version": "napi version"
+    "version": "napi version",
+    "test:unit": "node --test test/query.test.cjs",
+    "test:integration": "node scripts/test-processes.mjs",
+    "check:packages": "node scripts/prepare-packages.mjs",
+    "test:install": "node scripts/test-install.mjs",
+    "benchmark": "node benchmarks/compare.mjs",
+    "test:electron": "node scripts/test-electron.mjs"
   },
   "packageManager": "yarn@4.18.0",
-  "repository": "https://github.com/Brooooooklyn/sysinfo.git",
-  "description": "Query system information"
+  "repository": "https://github.com/Draculabo/sysinfo.git",
+  "description": "Read-only async process snapshots with independent caller deadlines and coalesced native scans",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

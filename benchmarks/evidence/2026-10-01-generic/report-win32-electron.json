@@ -1,0 +1,419 @@
+{
+  "protocol": "all-processes-v1",
+  "date": "2026-09-30T21:47:33.430Z",
+  "packageVersion": "0.1.0",
+  "platform": "win32",
+  "arch": "x64",
+  "osRelease": "10.0.26200",
+  "runtime": "Electron",
+  "node": "v22.21.1",
+  "electron": "37.10.3",
+  "samplesPerBackend": 30,
+  "queryBudgetMs": 10000,
+  "native": {
+    "count": 30,
+    "firstMs": 207.1,
+    "p50Ms": 248.1,
+    "p95Ms": 292.7,
+    "maxMs": 314.2,
+    "within1000Ms": 30,
+    "metadataVerified": 30,
+    "rowsMin": 734,
+    "rowsMax": 753
+  },
+  "cim": {
+    "count": 30,
+    "firstMs": 2568.1,
+    "p50Ms": 2576.7,
+    "p95Ms": 2711.4,
+    "maxMs": 2714.7,
+    "within1000Ms": 0,
+    "metadataVerified": 30,
+    "rowsMin": 736,
+    "rowsMax": 755
+  },
+  "samples": {
+    "native": [
+      {
+        "elapsedMs": 207.13,
+        "rows": 743,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 248.1167000000005,
+        "rows": 738,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 314.15760000000046,
+        "rows": 738,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 236.46650000000045,
+        "rows": 736,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 238.21370000000024,
+        "rows": 736,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 273.8750999999975,
+        "rows": 752,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 249.72829999999885,
+        "rows": 753,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 236.85069999999905,
+        "rows": 744,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 260.04190000000017,
+        "rows": 745,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 269.66430000000037,
+        "rows": 743,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 229.3972999999969,
+        "rows": 743,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 278.5828000000038,
+        "rows": 752,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 268.9560999999958,
+        "rows": 753,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 254.33320000000094,
+        "rows": 748,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 251.83740000000398,
+        "rows": 749,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 253.70389999999315,
+        "rows": 750,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 227.06580000000395,
+        "rows": 750,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 263.7274000000034,
+        "rows": 751,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 240.4056999999957,
+        "rows": 751,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 255.50039999999717,
+        "rows": 746,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 292.72960000000603,
+        "rows": 747,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 230.03450000000157,
+        "rows": 736,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 248.075499999999,
+        "rows": 736,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 226.15149999999267,
+        "rows": 734,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 221.68090000000666,
+        "rows": 734,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 255.142399999997,
+        "rows": 741,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 236.13969999999972,
+        "rows": 741,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 229.51260000000184,
+        "rows": 740,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 243.08890000000247,
+        "rows": 739,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 235.91310000000522,
+        "rows": 735,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      }
+    ],
+    "cim": [
+      {
+        "elapsedMs": 2568.1036,
+        "rows": 741,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2541.4356000000002,
+        "rows": 740,
+        "argvUnavailable": 215,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2470.5919999999996,
+        "rows": 745,
+        "argvUnavailable": 213,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2489.5049,
+        "rows": 740,
+        "argvUnavailable": 213,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2558.8333999999995,
+        "rows": 741,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2679.1764000000003,
+        "rows": 752,
+        "argvUnavailable": 214,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2570.542400000002,
+        "rows": 745,
+        "argvUnavailable": 212,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2658.9683000000005,
+        "rows": 749,
+        "argvUnavailable": 215,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2554.999600000003,
+        "rows": 754,
+        "argvUnavailable": 212,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2449.9000000000015,
+        "rows": 745,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2428.8340000000026,
+        "rows": 745,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2583.8106000000007,
+        "rows": 755,
+        "argvUnavailable": 213,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2582.4792000000016,
+        "rows": 747,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2607.4847999999984,
+        "rows": 747,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2596.6923000000024,
+        "rows": 755,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2547.693999999996,
+        "rows": 752,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2714.6793000000034,
+        "rows": 747,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2612.6955000000016,
+        "rows": 755,
+        "argvUnavailable": 213,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2576.666299999997,
+        "rows": 746,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2600.9187999999995,
+        "rows": 748,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2711.445899999999,
+        "rows": 744,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2601.262799999997,
+        "rows": 738,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2580.359900000003,
+        "rows": 739,
+        "argvUnavailable": 212,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2598.7513999999937,
+        "rows": 742,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2531.9199999999983,
+        "rows": 736,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2407.777799999996,
+        "rows": 739,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2508.828999999998,
+        "rows": 746,
+        "argvUnavailable": 219,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2583.561499999996,
+        "rows": 740,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2600.272199999992,
+        "rows": 743,
+        "argvUnavailable": 214,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 2485.224399999992,
+        "rows": 743,
+        "argvUnavailable": 211,
+        "fixtureVerified": true
+      }
+    ]
+  },
+  "burst": {
+    "requests": 20,
+    "nativeQueries": 1
+  },
+  "deadline": {
+    "requests": 10,
+    "budgetMs": 1000,
+    "success": 10
+  },
+  "independentDeadlines": {
+    "short": {
+      "outcome": "timeout",
+      "elapsedMs": 17.29110000000219
+    },
+    "longerSucceeded": true,
+    "sharedNativeScans": 1
+  },
+  "scope": "Both backends enumerate all processes without application filtering. CIM includes fresh PowerShell startup, JSON transport and argv parsing; native additionally exposes cwd and startTime. Only dedicated fixture metadata is checked. No CPU or memory comparison. First run included; no reboot cold-start claim."
+}

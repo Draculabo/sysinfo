@@ -184,7 +184,7 @@ $RECYCLE.BIN/
 #Added by cargo
 
 /target
-Cargo.lock
+
 
 .pnp.*
 .yarn/*
@@ -422,3 +422,8 @@ $RECYCLE.BIN/
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
+
+/npm/
+/artifacts/
+/.generated/
+/test-results/

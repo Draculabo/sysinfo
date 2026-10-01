@@ -6,6 +6,7 @@ use napi::{bindgen_prelude::Reference, Env, Result};
 use napi_derive::napi;
 
 mod cpu;
+mod process;
 mod sys;
 
 #[napi(object)]

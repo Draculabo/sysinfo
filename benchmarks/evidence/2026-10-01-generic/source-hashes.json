@@ -1,0 +1,17 @@
+{
+  "protocol": "all-processes-v1",
+  "upstream": "537111e259547a217ee46630cf9a921fb8f2a320",
+  "sources": {
+    "index.js": "0923841d09b4ab0a3fbedc3d22b548c608906db03982bf86e7cb451fa2d0051d",
+    "index.d.ts": "acccfae5a4e93eb68be8a7365374e2438f29bf3b2eb74426ce8b9f4dd7edd45a",
+    "lib/query.cjs": "22e8c536a18b9fb88f656d07aea593e1b51166502f6ea756adc4497872b65b3e",
+    "src/process.rs": "3097ab5d9bd77859b6c441486c9881a1595eb5b019dd84a4475b67f9f73390a1",
+    "src/lib.rs": "2b547cdf117723ccfb8951e36254bda4208ebb2cc6528d03010ea4c092065179",
+    "Cargo.lock": "596a1181cdc35d3a8f2fb95428fd905893c9d0b8fb4d2c7b595783bfe9305bd3",
+    "rust-toolchain.toml": "9c1fbb8c1b62479e27e83f85a7133039e4a6f50d8181961ca4cc85f3ed8bb0b3",
+    "benchmarks/compare.mjs": "634f4c3ce21da7b5bd91d0a6f03d74e94545c7346a7ba3ae3f9a786beab1f07b",
+    "benchmarks/cim.mjs": "baedb6048f088a617a1e8b44844f72710ba937723d5d1ee2a3faae9271961d3d",
+    "benchmarks/windows-argv.cjs": "3838607b0a39c8b13799ff0e731066d4677e872d5cef40029eff72fb99b378e3",
+    "scripts/native-test-binding.mjs": "38db0804001e84a766a0c7c9205c75fd4bb87ed316283c3e9e975b218ed9d2c3"
+  }
+}

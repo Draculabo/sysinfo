@@ -1,0 +1,227 @@
+{
+  "protocol": "all-processes-v1",
+  "date": "2026-09-30T21:44:36.418Z",
+  "packageVersion": "0.1.0",
+  "platform": "linux",
+  "arch": "x64",
+  "osRelease": "6.6.87.1-microsoft-standard-WSL2",
+  "runtime": "Node",
+  "node": "v25.2.1",
+  "electron": null,
+  "samplesPerBackend": 30,
+  "queryBudgetMs": 10000,
+  "native": {
+    "count": 30,
+    "firstMs": 20.4,
+    "p50Ms": 3.6,
+    "p95Ms": 4.7,
+    "maxMs": 20.4,
+    "within1000Ms": 30,
+    "metadataVerified": 30,
+    "rowsMin": 56,
+    "rowsMax": 56
+  },
+  "cim": null,
+  "samples": {
+    "native": [
+      {
+        "elapsedMs": 20.42152999999999,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.9414450000000016,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 4.027089000000018,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 4.668663000000009,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.6317239999999913,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.736348000000021,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.980608999999987,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.446194999999989,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.9253229999999917,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.515640999999988,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.5228700000000117,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.6127759999999967,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 4.198830999999984,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.7893589999999904,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.571235999999999,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.803290000000004,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.9784569999999917,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.479174999999998,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.292273999999992,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 4.284423000000004,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.1664539999999874,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.6672329999999818,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.1387259999999912,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.3248490000000004,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.544062999999994,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.2295150000000206,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.7437129999999854,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.098021999999986,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.013748000000021,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      },
+      {
+        "elapsedMs": 3.3853340000000003,
+        "rows": 56,
+        "argvUnavailable": 0,
+        "fixtureVerified": true
+      }
+    ],
+    "cim": []
+  },
+  "burst": {
+    "requests": 20,
+    "nativeQueries": 1
+  },
+  "deadline": {
+    "requests": 10,
+    "budgetMs": 1000,
+    "success": 10
+  },
+  "independentDeadlines": {
+    "short": {
+      "outcome": "completed"
+    },
+    "longerSucceeded": true,
+    "sharedNativeScans": 1
+  },
+  "scope": "Both backends enumerate all processes without application filtering. CIM includes fresh PowerShell startup, JSON transport and argv parsing; native additionally exposes cwd and startTime. Only dedicated fixture metadata is checked. No CPU or memory comparison. First run included; no reboot cold-start claim."
+}

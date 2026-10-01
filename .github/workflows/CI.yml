@@ -302,6 +302,7 @@ jobs:
           run: yarn test
   publish:
     name: Publish
+    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -320,28 +321,25 @@ jobs:
           cache: yarn
       - name: Install dependencies
         run: yarn install
-      - name: create npm dirs
-        run: yarn napi create-npm-dirs
-      - name: Download all artifacts
+      - name: Download native bindings
         uses: actions/download-artifact@v8
         with:
-          path: artifacts
-      - name: Move artifacts
-        run: yarn artifacts
-      - name: List packages
-        run: ls -R ./npm
-        shell: bash
+          pattern: bindings-*
+          merge-multiple: true
+          path: .
+      - name: Verify release packages
+        run: yarn check:packages && yarn test:install
       - name: Publish
         run: |
           npm config set provenance true
           if git log -1 --pretty=%B | grep "^[0-9]\+\.[0-9]\+\.[0-9]\+$";
           then
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-            npm publish --access public
+            npm_config_tag=latest npm publish --access public
           elif git log -1 --pretty=%B | grep "^[0-9]\+\.[0-9]\+\.[0-9]\+";
           then
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-            npm publish --tag next --access public
+            npm_config_tag=next npm publish --tag next --access public
           else
             echo "Not a release, skipping publish"
           fi

@@ -5,6 +5,17 @@ __metadata:
   version: 10
   cacheKey: 10c0
 
+"@draculabo/sysinfo-process-enhanced@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@draculabo/sysinfo-process-enhanced@workspace:."
+  dependencies:
+    "@napi-rs/cli": "npm:^3.0.3"
+    ava: "npm:^8.0.0"
+    oxlint: "npm:^1.8.0"
+    systeminformation: "npm:^5.27.7"
+  languageName: unknown
+  linkType: soft
+
 "@emnapi/core@npm:^1.4.5":
   version: 1.4.5
   resolution: "@emnapi/core@npm:1.4.5"
@@ -528,17 +539,6 @@ __metadata:
   checksum: 10c0/e74d5d03a2edfd2a90ca90d97f746b200f28abca8960bc834c6063fe81fa26c826ce9a2224c68abfdb2190d8a873e03dc9126b7b5a5aa560843b00044602a89b
   languageName: node
   linkType: hard
-
-"@napi-rs/sysinfo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@napi-rs/sysinfo@workspace:."
-  dependencies:
-    "@napi-rs/cli": "npm:^3.0.3"
-    ava: "npm:^8.0.0"
-    oxlint: "npm:^1.8.0"
-    systeminformation: "npm:^5.27.7"
-  languageName: unknown
-  linkType: soft
 
 "@napi-rs/tar-android-arm-eabi@npm:1.0.0":
   version: 1.0.0
