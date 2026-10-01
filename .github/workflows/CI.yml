@@ -46,6 +46,10 @@ jobs:
 
       - name: Cargo fmt
         run: cargo fmt -- --check
+      - name: Test macOS argument parsing
+        run: |
+          rustc --edition=2021 --test src/process/macos_args.rs -o "$RUNNER_TEMP/sysinfo-macos-args"
+          "$RUNNER_TEMP/sysinfo-macos-args"
       
   build:
     strategy:
@@ -328,7 +332,11 @@ jobs:
           merge-multiple: true
           path: .
       - name: Verify release packages
-        run: yarn check:packages && yarn test:install
+        # https://github.com/npm/cli/issues/9846: newer npm rejects unpublished optional deps.
+        # Remove this pin when a newer npm passes the first-release install/ci acceptance.
+        run: |
+          npm install --global npm@11.13.0
+          yarn check:packages && yarn test:install
       - name: Publish
         run: |
           npm config set provenance true

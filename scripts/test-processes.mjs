@@ -27,9 +27,10 @@ assert.equal(typeof system.totalMemory(), 'bigint');
 const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'sysinfo-process-'));
 const fixture = path.join(directory, 'query fixture 中文.cjs');
 fs.writeFileSync(fixture, "process.stdout.write('ready\\n'); setInterval(() => {}, 1000);\n");
-const argumentsToCheck = ['argument with spaces 中文', 'quote=a"b', '', 'trailing\\'];
+const argumentsToCheck = ['argument with spaces 中文', 'quote=a"b', '', '', 'trailing\\', ''];
 const child = spawn(process.execPath, [fixture, ...argumentsToCheck], {
   cwd: directory, stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true,
+  env: { ...process.env, SYSINFO_ARGV_SENTINEL: 'must-not-be-an-argument' },
 });
 let timer;
 try {
@@ -45,8 +46,20 @@ try {
   const current = rows.find(row => row.pid === child.pid);
   assert(current, 'The real fixture process must be observable');
   assert.equal(current.parentPid, process.pid);
-  assert.equal(fs.realpathSync(current.exe), fs.realpathSync(process.execPath));
-  assert.deepEqual(current.cmd.slice(1), [fixture, ...argumentsToCheck]);
+  const expectedArguments = [fixture, ...argumentsToCheck];
+  if (process.platform === 'linux') {
+    // QEMU exposes the host interpreter for another PID, even when that path is absent here.
+    const processDirectory = `/proc/${child.pid}`;
+    assert.equal(current.exe, fs.readlinkSync(`${processDirectory}/exe`));
+    const bytes = fs.readFileSync(`${processDirectory}/cmdline`);
+    assert.equal(bytes.at(-1), 0, 'The live fixture argv must end in NUL');
+    const kernelArguments = bytes.subarray(0, -1).toString('utf8').split('\0');
+    assert.deepEqual(current.cmd, kernelArguments);
+    assert.deepEqual(current.cmd.slice(-expectedArguments.length), expectedArguments);
+  } else {
+    assert.equal(fs.realpathSync(current.exe), fs.realpathSync(process.execPath));
+    assert.deepEqual(current.cmd.slice(1), expectedArguments);
+  }
   assert.equal(fs.realpathSync(current.cwd), fs.realpathSync(directory));
   assert.equal(typeof current.startTime, 'bigint');
   assert(current.startTime > 0n);
