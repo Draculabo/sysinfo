@@ -1,5 +1,8 @@
 use std::time::{Duration, Instant};
 
+#[cfg(any(target_os = "macos", test))]
+mod macos_args;
+
 use napi::{
   bindgen_prelude::{AsyncTask, BigInt},
   Env, Error, Result, Status, Task,
@@ -31,15 +34,13 @@ impl Task for ProcessQuery {
   fn compute(&mut self) -> Result<Self::Output> {
     self.check_deadline()?;
     let mut system = System::new();
-    system.refresh_processes_specifics(
-      ProcessesToUpdate::All,
-      true,
-      ProcessRefreshKind::nothing()
-        .with_exe(UpdateKind::Always)
-        .with_cmd(UpdateKind::Always)
-        .with_cwd(UpdateKind::Always)
-        .without_tasks(),
-    );
+    let refresh_kind = ProcessRefreshKind::nothing()
+      .with_exe(UpdateKind::Always)
+      .with_cwd(UpdateKind::Always)
+      .without_tasks();
+    #[cfg(not(target_os = "macos"))]
+    let refresh_kind = refresh_kind.with_cmd(UpdateKind::Always);
+    system.refresh_processes_specifics(ProcessesToUpdate::All, true, refresh_kind);
     self.check_deadline()?;
     let mut result = Vec::with_capacity(system.processes().len());
     for process in system.processes().values() {
@@ -70,6 +71,22 @@ impl Task for ProcessQuery {
   fn resolve(&mut self, _: Env, output: Self::Output) -> Result<Self::JsValue> {
     self.check_deadline()?;
     Ok(output)
+  }
+}
+
+#[cfg(target_os = "macos")]
+fn process_arguments(process: &sysinfo::Process) -> Result<Option<Vec<String>>> {
+  match macos_args::read(process.pid().as_u32()) {
+    Ok(arguments) => Ok(Some(arguments)),
+    // Processes can exit between enumeration and sysctl; protected processes expose no argv.
+    Err(error) if matches!(error.raw_os_error(), Some(libc::ESRCH | libc::EINVAL)) => Ok(None),
+    Err(error) if matches!(error.raw_os_error(), Some(libc::EPERM | libc::EACCES)) => {
+      Ok(Some(Vec::new()))
+    }
+    Err(_) => Err(Error::new(
+      Status::GenericFailure,
+      "Process arguments could not be read",
+    )),
   }
 }
 
@@ -107,7 +124,7 @@ fn process_arguments(process: &sysinfo::Process) -> Result<Option<Vec<String>>> 
     .map(Some)
 }
 
-#[cfg(not(any(target_os = "linux", target_os = "android")))]
+#[cfg(not(any(target_os = "linux", target_os = "android", target_os = "macos")))]
 fn process_arguments(process: &sysinfo::Process) -> Result<Option<Vec<String>>> {
   process
     .cmd()
